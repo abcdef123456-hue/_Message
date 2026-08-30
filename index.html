@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Samreen</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #2d112d, #140514);
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: white;
+        }
+        .card-container {
+            background-color: #2b172b;
+            border-radius: 20px;
+            padding: 30px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid #3d233d;
+        }
+        .card-header {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        .heart-avatar {
+            background: linear-gradient(to bottom, #ffa275, #ff577f);
+            font-size: 30px;
+            width: 70px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+        }
+        .header-text h2 {
+            margin: 0 0 5px 0;
+            font-size: 24px;
+        }
+        .header-text p {
+            margin: 0;
+            color: #e0b0e0;
+            font-size: 14px;
+        }
+        button {
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            color: white;
+            border: none;
+            padding: 12px 35px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: scale(1.05);
+        }
+        .hidden-message {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #3d213d;
+            border-radius: 10px;
+            text-align: left;
+            line-height: 1.5;
+        }
+        .card-footer {
+            margin-top: 25px;
+            font-size: 12px;
+            color: #8a638a;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card-container">
+    <div class="card-header">
+        <div class="heart-avatar">💖</div>
+        <div class="header-text">
+            <h2>For Samreen</h2>
+            <p>Every heartbeat of mine whispers your name 💕</p>
+        </div>
+    </div>
+    
+    <div class="button-area">
+        <button id="openBtn" onclick="revealMessage()">Open my message</button>
+    </div>
+    
+    <div id="secretMessage" class="hidden-message">
+        <p>Dear Samreen,</p>
+        <p>You mean the absolute world to me. I made this website just to show you how much I care about you. ✨</p>
+    </div>
+    
+    <div class="card-footer">
+        Made with 💗 and endless care
+    </div>
+</div>
+
+<script>
+    function revealMessage() {
+        var messageBox = document.getElementById("secretMessage");
+        var openButton = document.getElementById("openBtn");
+        
+        if (messageBox.style.display === "block") {
+            messageBox.style.display = "none";
+            openButton.innerText = "Open my message";
+        } else {
+            messageBox.style.display = "block";
+            openButton.innerText = "Close message";
+        }
+    }
+</script>
+
+</body>
+</html>
